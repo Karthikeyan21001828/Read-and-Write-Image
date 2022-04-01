@@ -23,58 +23,58 @@ End the program and close the output image windows.
 ### Register Number: 
 i) #To Read,display the image
 ```
-  import cv2
-
+import cv2
+img =cv2.imread('bird.jpg',1)
+cv2.imshow('bird',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 ii) #To write the image
 ```
-
-
-
+cv2.imwrite('img.jpg',img)
+cv2.destroyAllWindows()
 ```
 iii) #Find the shape of the Image
-``python3
-
-
-
+```python3
+print(img.shape)
 ```
 iv) #To access rows and columns
 ```python3
-
-
-
+import random
+for i in range(100):
+    for j in range(img.shape[1]):
+        img[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 v) #To cut and paste portion of image
 ```python3
-
-
-
+import cv2
+img=cv2.imread('bird.jpg',1)
+tag=img[50:70,50:70]
+img[100:120,100:120]=tag
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 
 ## Output:
 
 ### i) Read and display the image
-
-<br>
-<br>
+![output](oprs.png)
 
 ### ii)Write the image
-
-<br>
-<br>
+![output](opw.png)
 
 ### iii)Shape of the Image
-
-<br>
-<br>
+![output](opshape.png)
 
 ### iv)Access rows and columns
-<br>
-<br>
+![output](opaccess.png)
 
 ### v)Cut and paste portion of image
-<br>
-<br>
+![output](opcp.png)
 
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
