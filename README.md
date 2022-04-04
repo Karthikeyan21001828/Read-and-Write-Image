@@ -22,13 +22,13 @@ End the program and close the output image windows.
 ### Developed By: Karthikeyan.K
 ### Register Number: 212221230046
 i) #To Read,display the image
-~~~
+```
 import cv2
 img =cv2.imread('bird.jpg',1)
 cv2.imshow('bird',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-~~~
+```
 ii) #To write the image
 ```
 cv2.imwrite('img.jpg',img)
